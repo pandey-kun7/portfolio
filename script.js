@@ -135,3 +135,41 @@ if (graphCells) {
       renderGraph({}, "Contribution graph unavailable offline");
     });
 }
+
+const graphScroll = document.getElementById("graph-scroll");
+const graphScrollWrap = graphScroll && graphScroll.closest(".graph-scroll-wrap");
+
+if (graphScroll && graphScrollWrap) {
+  let graphScrollFrame = 0;
+
+  const updateGraphScroll = () => {
+    graphScrollFrame = 0;
+    const scrollable = graphScroll.scrollWidth > graphScroll.clientWidth + 4;
+    const atStart = graphScroll.scrollLeft <= 4;
+    const atEnd = graphScroll.scrollLeft + graphScroll.clientWidth >= graphScroll.scrollWidth - 4;
+
+    graphScrollWrap.classList.toggle("is-scrollable", scrollable);
+    graphScrollWrap.classList.toggle("at-start", atStart);
+    graphScrollWrap.classList.toggle("at-end", atEnd);
+  };
+
+  const queueGraphScrollUpdate = () => {
+    if (graphScrollFrame) return;
+    graphScrollFrame = requestAnimationFrame(updateGraphScroll);
+  };
+
+  graphScroll.addEventListener("scroll", queueGraphScrollUpdate, { passive: true });
+  window.addEventListener("resize", queueGraphScrollUpdate);
+
+  if (typeof ResizeObserver !== "undefined") {
+    const graphResizeObserver = new ResizeObserver(queueGraphScrollUpdate);
+    graphResizeObserver.observe(graphScroll);
+  }
+
+  if (typeof MutationObserver !== "undefined" && graphCells) {
+    new MutationObserver(queueGraphScrollUpdate).observe(graphCells, { childList: true });
+  }
+
+  updateGraphScroll();
+  requestAnimationFrame(updateGraphScroll);
+}

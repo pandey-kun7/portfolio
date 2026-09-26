@@ -188,13 +188,16 @@
           <span class="card-label">CONTRIBUTIONS · <span id="graph-year"></span></span>
           <a href="https://github.com/pandey-kun7" target="_blank" rel="noreferrer">@pandey-kun7 ↗</a>
         </div>
-        <div class="graph-scroll" id="graph-scroll">
-          <div class="graph-grid">
-            <div></div>
-            <div class="graph-months" id="graph-months" aria-hidden="true"></div>
-            <div class="graph-days" aria-hidden="true"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
-            <div class="graph-cells" id="graph-cells" role="img" aria-label="Kunal Pandey's GitHub contributions graph for the year"></div>
+        <div class="graph-scroll-wrap">
+          <div class="graph-scroll" id="graph-scroll" tabindex="0" role="group" aria-label="Scrollable GitHub contributions graph">
+            <div class="graph-grid">
+              <div></div>
+              <div class="graph-months" id="graph-months" aria-hidden="true"></div>
+              <div class="graph-days" aria-hidden="true"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
+              <div class="graph-cells" id="graph-cells" role="img" aria-label="Kunal Pandey's GitHub contributions graph for the year"></div>
+            </div>
           </div>
+          <span class="graph-hint" aria-hidden="true">scroll →</span>
         </div>
         <div class="graph-foot">
           <span id="graph-total"></span>
@@ -236,7 +239,6 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Kunal Pandey</span>
-    <span>made with HTML · CSS · JS · curiosity</span>
     <a href="#top">back to top ↑</a>
   </footer>
 
