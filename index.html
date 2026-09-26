@@ -1,11 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kunal Pandey — Computer Science undergraduate building backend systems, learning systems engineering, and documenting the journey.">
+  <title>Kunal Pandey, Engineer in Progress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    Portfolio
+<body data-page="professional">
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Kunal Pandey home">
+      <span class="brand-mark">KP</span>
+      <span>kunal<span class="dot">.</span>pandey</span>
+    </a>
+
+    <nav class="mode-nav" aria-label="Portfolio sections">
+      <a class="mode-link active" href="index.html" aria-current="page">Professional</a>
+      <a class="mode-link" href="personal.html">Personal</a>
+    </nav>
+
+    <div class="top-links">
+      <a href="https://github.com/pandey-kun7" target="_blank" rel="noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/kunal-pandey-025795324/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section">
+      <div class="hero-copy">
+        <h1>I make things.<br><span>Then I break them.</span><br>Then I learn why.</h1>
+        <p class="hero-lede">
+          I'm Kunal, a CSE undergraduate getting increasingly obsessed with what happens
+          underneath the abstractions.<br> Backend systems, networking, algorithms, operating
+          systems, distributed systems...
+        </p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#work">See the work ↓</a>
+          <a class="button button-light" href="#contactbox">Say hello ↗</a>
+          <a class="button button-light" href="https://drive.google.com/file/d/1uDyvPMVYfJAjdcrSQtEyRR3DQBSjc9iu/view?usp=sharing" target="_blank" rel="noreferrer">Resume ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="sticker">ENGINEER<br>IN PROGRESS</div>
+        <img class="avatar" src="https://avatars.githubusercontent.com/u/191033820?s=512&v=4" alt="Kunal Pandey's GitHub profile image">
+        <div class="hero-card-bottom">
+          <a href="https://x.com/pandey_kun" target="_blank" rel="noreferrer">@pandey_kun 𝕏</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto section">
+      <div class="section-label">01 / WHO I AM</div>
+      <div class="manifesto-grid">
+        <h2>literally<br><em>me.</em></h2>
+        <div class="manifesto-copy">
+          <p>
+            I have wandered around in my mind while making stuff I have liked and learned from. I like to be upfront about a topic and teach myself and others. I am yet to become a better version of myself, coz <p>
+              Man - o - Man, there's this ocean I wanna drown my head in and just look back amd say, yup can do better.
+            </p>
+            <p>
+              There's nuance in engineering and I like to do it :)
+            </p>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-label">02 / SELECTED WORK</div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-top">
+            <span class="project-number">01</span>
+            <span class="tag">C · NETWORKING</span>
+          </div>
+          <h3>Krono</h3>
+          <p class="project-sub">HTTP Web Server in C</p>
+          <p>Built an HTTP server from scratch with Winsock2 and TCP sockets. Socket lifecycle, request handling, HTTP responses, static files, MIME detection, caching — no framework hiding the machinery.</p>
+          <div class="project-footer">
+            <span>systems / http / sockets</span>
+            <a href="https://github.com/pandey-kun7/krono-c" target="_blank" rel="noreferrer">source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">02</span>
+            <span class="tag">NODE · MONGO</span>
+          </div>
+          <h3>Shorty</h3>
+          <p class="project-sub">URL Shortener</p>
+          <p>URL creation, redirection, JWT + cookie auth, role-based access control and analytics — structured as routes, controllers, middleware, services and models.</p>
+          <div class="project-footer">
+            <span>backend / auth / APIs</span>
+            <a href="https://github.com/pandey-kun7/Shorty" target="_blank" rel="noreferrer">source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">03</span>
+            <span class="tag">NODE · IR</span>
+          </div>
+          <h3>Search Engine</h3>
+          <p class="project-sub">TF-IDF Information Retrieval</p>
+          <p>A modular search engine exploring indexing, stemming, TF-IDF scoring, query processing and result ranking. Basically: making a machine find the right words.</p>
+          <div class="project-footer">
+            <span>algorithms / text / ranking</span>
+            <a href="https://github.com/pandey-kun7/search-engine" target="_blank" rel="noreferrer">source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">04</span>
+            <span class="tag">NODE · P2P</span>
+          </div>
+          <h3>BitTorrent Client</h3>
+          <p class="project-sub">Protocol from the ground up</p>
+          <p>Parsing torrent metadata, talking to trackers, discovering peers, moving pieces and assembling files. A small project with a very useful lesson: protocols are fun when you implement them.</p>
+          <div class="project-footer">
+            <span>networking / P2P / files</span>
+            <a href="https://github.com/pandey-kun7/BitTorrent-client" target="_blank" rel="noreferrer">source ↗</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">05</span>
+            <span class="tag">REACT · SOCKET.IO</span>
+          </div>
+          <h3>Anonymis</h3>
+          <p class="project-sub">Chats that know when to disappear</p>
+          <p>A real-time chat app built around temporary group conversations. Create or join groups, talk in real time, and keep the messages that actually matter in the Memory Box. Messages queue offline and sync when you're back — auth, OTP verification, protected routes and ephemeral group lifecycles under a loud neubrutalist UI.</p>
+          <div class="project-footer">
+            <span>realtime / chat / offline-sync</span>
+            <span><a href="https://github.com/pandey-kun7/anonymis-FE" target="_blank" rel="noreferrer">frontend ↗</a> · <a href="https://github.com/pandey-kun7/anonymis-BE" target="_blank" rel="noreferrer">backend ↗</a></span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-number">06</span>
+            <span class="tag">PYTHON · SCRAPY</span>
+          </div>
+          <h3>Scrappy</h3>
+          <p class="project-sub">Web Scraping CLI</p>
+          <p>Spiders, pipelines, item loaders, pagination, throttling and structured exports. A practical little exercise in turning messy websites into data you can actually use.</p>
+          <div class="project-footer">
+            <span>scraping / data / CLI</span>
+            <a href="https://github.com/pandey-kun7/scrappy" target="_blank" rel="noreferrer">source ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- <section class="section viewer-section">
+      <div class="section-label">03 / A SMALL NOTE</div>
+      <div class="viewer-card">
+        <p class="eyebrow">HEY, YOU — YES, YOU SCROLLING</p>
+        <p class="viewer-big">If you made it this far, you're a fellow enjoyer or lost. Either way, welcome.</p>
+        <p class="viewer-small"> I did it that way.</p>
+      </div>
+    </section> -->
+
+    <section class="section skills-section">
+      <div class="section-label">03 / Familiar With</div>
+      <div class="skills-wrap">
+        <span>C</span><span>C++</span><span>JavaScript</span><span>Python</span>
+        <span>Node.js</span><span>Express</span><span>Next.js</span><span>REST APIs</span>
+        <span>MongoDB</span><span>MySQL</span><span>TCP/IP</span><span>HTTP</span>
+        <span>Socket Programming</span><span>Git</span><span>Linux</span><span>Make</span>
+        <span>Data Structures</span><span>Algorithms</span><span>System Design</span>
+      </div>
+    </section>
+
+    <section class="section graph-section">
+      <div class="section-label">04 / GITHUB GRAPH</div>
+      <div class="graph-card">
+        <div class="graph-head">
+          <span class="card-label">CONTRIBUTIONS · <span id="graph-year"></span></span>
+          <a href="https://github.com/pandey-kun7" target="_blank" rel="noreferrer">@pandey-kun7 ↗</a>
+        </div>
+        <div class="graph-scroll" id="graph-scroll">
+          <div class="graph-grid">
+            <div></div>
+            <div class="graph-months" id="graph-months" aria-hidden="true"></div>
+            <div class="graph-days" aria-hidden="true"><span></span><span>Mon</span><span></span><span>Wed</span><span></span><span>Fri</span><span></span></div>
+            <div class="graph-cells" id="graph-cells" role="img" aria-label="Kunal Pandey's GitHub contributions graph for the year"></div>
+          </div>
+        </div>
+        <div class="graph-foot">
+          <span id="graph-total"></span>
+          <span class="graph-legend"><span>Less</span>
+          <span class="graph-scale">
+            <i style="background:#ebedf0"></i><i style="background:#9ecbff"></i><i style="background:#6aa9f5"></i><i style="background:#2f81f7"></i><i style="background:#0a3069"></i>
+          </span>
+          <span>More</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section">
+      <div class="contact-box" id = "contactbox">
+        <p class="eyebrow">05 / END OF SCROLL</p>
+        <h2>Have something<br>worthy for me?</h2>
+        <p>I'm around. Send me the weird version of it.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="contact-row">
+            <label class="contact-field">
+              <span>Your email</span>
+              <input type="email" name="email" placeholder="you@somewhere.com" required>
+            </label>
+            <label class="contact-field">
+              <span>Subject</span>
+              <input type="text" name="subject" placeholder="What's this about?" required>
+            </label>
+          </div>
+          <label class="contact-field">
+            <span>Body</span>
+            <textarea name="body" rows="5" placeholder="Give me the weird version…" required></textarea>
+          </label>
+          <button class="button contact-submit" type="submit">Send via Gmail ↗</button>
+        </form>
+        <p class="contact-alt">No Gmail? <a href="https://mail.google.com/mail/?view=cm&fs=1&to=10c.kunalpandey@gmail.com" target="_blank" rel="noreferrer">10c.kunalpandey@gmail.com ↗</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Kunal Pandey</span>
+    <span>made with HTML · CSS · JS · curiosity</span>
+    <a href="#top">back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
